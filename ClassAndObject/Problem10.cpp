@@ -38,7 +38,7 @@ int main(){
 
     BankAccount account1(BankAccountNo, Balance);
 
-    cout<<"Before Withdraw: "<<Balance <<endl;
+    cout<<"Initial Balance: "<<Balance <<endl;
 
     account1.withdraw(100);
 
