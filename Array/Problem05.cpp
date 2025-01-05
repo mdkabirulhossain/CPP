@@ -1,21 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void sortArray(int arr[], int n){
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n-i-1; j++){
-            if(arr[j] > arr[j+1]){
-                swap(arr[j], arr[j+1]);
+void sortArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
             }
         }
     }
 }
 
-int main(){
-    cout<<"Please enter the array size: ";
+int main()
+{
     int n;
+    cout << "Please enter the array size: ";
+    cin >> n;
     int arr[n];
-    for(int i=0; i<n; i++){
-        
+    for (int i = 0; i < n; i++){
+        cout << "arr[" << i << "]: ";
+        cin >> arr[i];
     }
+
+    sortArray(arr, n);
+    cout << "Smallest number of the array is: " << arr[0];
+    return 0;
 }
